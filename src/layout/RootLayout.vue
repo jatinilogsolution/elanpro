@@ -4,7 +4,7 @@
     <Navbar />
     <div class="overflow-hidden">
       <RouterView />
-      <Toaster />
+      <!-- <Toaster /> -->
     </div>
     <Footer />
 
