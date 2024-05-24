@@ -12,9 +12,17 @@ const props = defineProps({
     type: String,
     default: "text",
   },
+  inputCSS: {
+    type: String,
+    default: "",
+  },
+  isRequired: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-const placeholder = ref(`Enter ${props.label}...`);
+const placeholder = ref(`Enter ${props.label} `);
 </script>
 
 <template>
@@ -22,10 +30,12 @@ const placeholder = ref(`Enter ${props.label}...`);
     <Label :for="label">{{ label }}</Label>
     <Input
       class="border border-gray-400"
+      :class="inputCSS"
       size="small"
       :id="label"
       :type="inputType"
       :placeholder="placeholder"
+      :required="isRequired"
     />
   </div>
 </template>
